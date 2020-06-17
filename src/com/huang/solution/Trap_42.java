@@ -11,6 +11,9 @@ package com.huang.solution;
 
 输入: [0,1,0,2,1,0,1,3,2,1,2,1]
 输出: 6*/
+
+// 找出当前下标的左右两边 第一次出现的 比自己高的 柱子。
+// 该下标能装的水就取决于 上述中 较短的那一根的柱子长度 - 自己本身的高度
 public class Trap_42 {
     public int trap(int[] height) {
         int len = height.length;
