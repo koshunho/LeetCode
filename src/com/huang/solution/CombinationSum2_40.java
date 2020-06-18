@@ -35,7 +35,20 @@ candidates 中的每个数字在每个组合中只能使用一次。
 
 // 39传入的是i，这题传入的是i+1
 // 剪枝关键：if(i > startIndex && candidates[i] == candidates[i-1]) continue;
+// 同层去重。i>start一定要理解，i是当前考察的元素下标，start是本层最开始的那个元素的下标，
 // 答案能在Leetcode上跑出来 为什么在IDE上跑不出来。。。。
+
+
+
+//无论是求组合/子集/排列，只要原数组中含有重复元素，通用一个去重方法：
+// 1.先排序，使相同元素相邻；
+// 2.在backtrack的for循环里：
+//
+//
+// if(i>start&&candidates[i]==candidates[i-1]) continue;
+//
+// 作者：jin-ai-yi
+// 链接：https://leetcode-cn.com/problems/combination-sum-ii/solution/he-xin-kao-dian-tong-ceng-qu-zhong-by-jin-ai-yi/
 public class CombinationSum2_40 {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
