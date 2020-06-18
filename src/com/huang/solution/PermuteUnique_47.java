@@ -16,7 +16,7 @@ import java.util.List;
   [2,1,1]
 ]
 */
-
+// 关键：if(i >= 1 && nums[i] == nums[i-1] && !used[i-1]) continue;
 // 超级好的分析
 // https://leetcode-cn.com/problems/permutations-ii/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/
 public class PermuteUnique_47 {
